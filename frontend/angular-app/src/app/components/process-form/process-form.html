@@ -1,0 +1,15 @@
+<h2>Registrar Paso</h2>
+
+<form (ngSubmit)="submit()">
+
+    <input [(ngModel)]="model.name" name="name" placeholder="Nombre" />
+
+    <textarea [(ngModel)]="model.description" name="description"></textarea>
+
+    <input type="number" [(ngModel)]="model.step_order" name="step_order" />
+
+    <button type="submit">
+        Guardar
+    </button>
+
+</form>
