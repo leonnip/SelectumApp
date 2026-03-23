@@ -1,21 +1,33 @@
-<h2>Procesos</h2>
+<div class="container">
+    <div class="row">
+        <div class="col col-12">
+            <h2>Procesos</h2>
+        </div>
+    </div>
 
-<ul>
-    @for (p of processes; track p.id) {
-        <li>
-            {{p.step_order}} - {{p.name}}
-        </li>
-    }
-</ul>
+    <div class="row">
+        <div class="col col-12">
+            <ul>
+                @for (p of processes; track p.id) {
+                    <li>
+                        {{p.step_order}} - {{p.name}}
+                    </li>
+                }
+            </ul>
+        </div>
 
-<hr>
+        <div class="col col-12">
+            <h2>Historial Blockchain</h2>
+        </div>
 
-<h2>Historial Blockchain</h2>
-
-<ul>
-    @for (h of history; track h.id) {
-        <li>
-            {{h.hash}} → prev: {{h.previous_hash}}
-        </li>
-    }
-</ul>
+        <div class="col col-12">
+            <ul>
+                @for (h of history; track h.id) {
+                    <li>
+                        {{h.hash}} → prev: {{h.previous_hash}}
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

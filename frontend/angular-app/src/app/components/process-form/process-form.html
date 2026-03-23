@@ -1,15 +1,34 @@
-<h2>Registrar Paso</h2>
-
-<form (ngSubmit)="submit()">
-
-    <input [(ngModel)]="model.name" name="name" placeholder="Nombre" />
-
-    <textarea [(ngModel)]="model.description" name="description"></textarea>
-
-    <input type="number" [(ngModel)]="model.step_order" name="step_order" />
-
-    <button type="submit">
-        Guardar
-    </button>
-
-</form>
+<div class="container">
+    <div class="row">
+        <div class="col col-12">
+            <h2>Registrar Paso</h2>
+        </div>
+    </div>
+    <div class="row">
+        <form (ngSubmit)="submit()">
+            <div class="col col-md-4">
+                <input [(ngModel)]="model.name"
+                       class="form-control mt-2 mb-2"
+                       name="name"
+                       placeholder="Nombre"/>
+            </div>
+            <div class="col col-md-4">
+                <textarea [(ngModel)]="model.description"
+                          class="form-control mt-2 mb-2"
+                          name="description">
+                </textarea>
+            </div>
+            <div class="col col-md-4">
+                <input type="number"
+                       [(ngModel)]="model.step_order"
+                       class="form-control mt-2 mb-2"
+                       name="step_order"/>
+            </div>
+            <div class="col col-12">
+                <button type="submit" class="btn btn-success mt-2 mb-2">
+                    Guardar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
