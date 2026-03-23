@@ -3,6 +3,13 @@ const ProcessHistory = require("../models/processHistory");
 
 const { generateHash } = require("../services/hashService");
 
+/**
+ * Crea el proceso con los datos
+ * que viene desde el FrontEnd
+ * -----------------------------
+ * @param {*} req 
+ * @param {*} res 
+ */
 async function createProcess(req, res) {
 
     try {
@@ -50,6 +57,13 @@ async function createProcess(req, res) {
 
 }
 
+/**
+ * Se obtienen los procesos
+ * y se los retorna al FrontEnd
+ * ------------------------------
+ * @param {*} req 
+ * @param {*} res 
+ */
 async function getProcesses(req, res) {
 
     const processes =
@@ -61,6 +75,13 @@ async function getProcesses(req, res) {
 
 }
 
+/**
+ * Se obtiene el historial
+ * de los procesos creados
+ * -------------------------
+ * @param {*} req 
+ * @param {*} res 
+ */
 async function getHistory(req, res) {
 
     const history =
