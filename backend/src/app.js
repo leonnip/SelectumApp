@@ -1,15 +1,27 @@
 const express = require('express');
 
+const cors = require("cors");
+
+const sequelize = require("./config/database");
+
+const routes = require("./routes/processRoutes");
+
 const app = express();
+
+app.use(cors());
+app.use(express.json());
+
+app.use("/api", routes);
 
 const PORT = 3000;
 
-// Ruta básica
-app.get('/', (req, res) => {
-    res.send('Servidor funcionando 🚀');
-});
+sequelize.sync()
+    .then(() => {
 
-// Iniciar servidor
-app.listen(PORT, () => {
-    console.log(`Servidor corriendo en http://localhost:${PORT}`);
-});
+        app.listen(3000, () => {
+
+            console.log("Server running");
+
+        });
+
+    });
