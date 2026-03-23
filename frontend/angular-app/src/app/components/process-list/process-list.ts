@@ -19,12 +19,16 @@ export class ProcessList implements OnInit {
     }
 
     ngOnInit(): void {
+        /** Se obtienen los procesos
+         * -------------------------- */
         this.service.getProcesses().subscribe(
             (data: any) => {
                 this.processes = data;
             }
         );
 
+        /** Se obtiene el historial
+         * ------------------------- */
         this.service.getHistory().subscribe(
             (data: any) => {
                 this.history = data;

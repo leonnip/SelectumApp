@@ -24,6 +24,9 @@ export class ProcessForm {
     ) {
     }
 
+    /** Se envía el formulario de datos
+     * para crear el proceso siguiente
+     * --------------------------------- */
     submit() {
         this.service.createProcess(this.model).subscribe(
             () => {
